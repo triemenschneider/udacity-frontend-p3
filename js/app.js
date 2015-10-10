@@ -57,7 +57,7 @@ var Player = function(x, y) {
 };
 // This class requires an update(), render() and
 Player.prototype.update = function() {
-    
+     
 };
 
 Player.prototype.render = function() {

@@ -57,7 +57,7 @@ var Player = function(x, y) {
 };
 // This class requires an update(), render() and
 Player.prototype.update = function() {
-
+    
 };
 
 Player.prototype.render = function() {
@@ -72,11 +72,17 @@ Player.prototype.playerBackToStart = function() {
 // a handleInput() method.
 Player.prototype.handleInput = function(e) {
     if (e === 'left') {
-        this.x -= 100;
+        if (this.x > 0) {
+            this.x -= 100;
+        }
     } else if (e === 'right') {
-        this.x += 100;
+        if (this.x < 400) {
+            this.x += 100;
+        }
     }  else if (e === 'down') {
-        this.y += 83;
+        if (this.y < 400) {
+            this.y += 83;
+        }
     }  else if (e === 'up') {
         if (this.y > 150) {
             this.y -= 83;
